@@ -1,12 +1,9 @@
 __pycache__/
 Data/
+Build/
 
-libmdAddr.so
-libmdGeo.so
-libmdGlobalAddr.so
-libmdRightFeilder.so
+*.so
 *.hash
-
 
 MelissaUpdater
 # mdGlobalAddr_pythoncode.py
