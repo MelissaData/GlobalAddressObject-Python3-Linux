@@ -44,7 +44,7 @@ And return
 ## Tested Environments
 
 - Linux 64-bit Python 3.8.7, Ubuntu 20.04.05 LTS
-- Melissa data files for 2024-Q3
+- Melissa data files for 2024-Q4
 
 ## Required File(s) and Programs
 
@@ -122,8 +122,8 @@ If you see the version number then you have installed Python3 and set up your en
 
 #### Download this project
 ```
-$ git clone https://github.com/MelissaData/GlobalAddressObject-Python3-Linux
-$ cd GlobalAddressObject-Python3-Linux
+git clone https://github.com/MelissaData/GlobalAddressObject-Python3-Linux
+cd GlobalAddressObject-Python3-Linux
 ```
 
 #### Set up Melissa Updater 
@@ -196,28 +196,28 @@ Parameters:
 When you have modified the script to match your data location, let's run the script. There are two modes:
 - Interactive 
 
-	The script will prompt the user for an address line 1, address line 2, address line 3, locality, administrative area, postal code, and country, then use the provided inputs to test Global Address Object. For example:
-	```
-	$ ./MelissaAddressObjectLinuxPython3.sh
-	```
-    For quiet mode:
-    ```
-    $ ./MelissaAddressObjectLinuxPython3.sh -quiet
-    ```
+  The script will prompt the user for an address line 1, address line 2, address line 3, locality, administrative area, postal code, and country, then use the provided inputs to test Global Address Object. For example:
+  ```
+  ./MelissaAddressObjectLinuxPython3.sh
+  ```
+  For quiet mode:
+  ```
+  ./MelissaAddressObjectLinuxPython3.sh -quiet
+  ```
 - Command Line 
 
-	You can pass an address line 1, address line 2, address line 3, locality, administrative area, postal code, country, and a license string into the ```--addressLine1```, ```--addressLine2```, ```--addressLine3```, ```--locality```, ```--administrativeArea```, ```--postalCode```, ```--country```, and ```--license``` parameters respectively to test Global Address Object. For example:
+  You can pass an address line 1, address line 2, address line 3, locality, administrative area, postal code, country, and a license string into the ```--addressLine1```, ```--addressLine2```, ```--addressLine3```, ```--locality```, ```--administrativeArea```, ```--postalCode```, ```--country```, and ```--license``` parameters respectively to test Global Address Object. For example:
 
-    ```
-    $ ./MelissaGlobalAddressObjectLinuxPython3.sh --addressLine1 "Melissa Data GmbH" --addressLine2 "Cäcilienstr. 42-44" --addressLine3 "50667 Köln" --country "Germany"
-    $ ./MelissaGlobalAddressObjectLinuxPython3.sh --addressLine1 "Melissa Data GmbH" --addressLine2 "Cäcilienstr. 42-44" --addressLine3 "50667 Köln" --country "Germany" --license "<your_license_string>"
-    ```
+  ```
+  ./MelissaGlobalAddressObjectLinuxPython3.sh --addressLine1 "Melissa Data GmbH" --addressLine2 "Cäcilienstr. 42-44" --addressLine3 "50667 Köln" --country "Germany"
+  ./MelissaGlobalAddressObjectLinuxPython3.sh --addressLine1 "Melissa Data GmbH" --addressLine2 "Cäcilienstr. 42-44" --addressLine3 "50667 Köln" --country "Germany" --license "<your_license_string>"
+  ```
 
-    For quiet mode:
-    ```
-    $ ./MelissaGlobalAddressObjectLinuxPython3.sh --addressLine1 "Melissa Data GmbH" --addressLine2 "Cäcilienstr. 42-44" --addressLine3 "50667 Köln" --country "Germany" --quiet
-    $ ./MelissaGlobalAddressObjectLinuxPython3.sh --addressLine1 "Melissa Data GmbH" --addressLine2 "Cäcilienstr. 42-44" --addressLine3 "50667 Köln" --country "Germany" --license "<your_license_string>" --quiet
-    ```
+  For quiet mode:
+  ```
+  ./MelissaGlobalAddressObjectLinuxPython3.sh --addressLine1 "Melissa Data GmbH" --addressLine2 "Cäcilienstr. 42-44" --addressLine3 "50667 Köln" --country "Germany" --quiet
+  ./MelissaGlobalAddressObjectLinuxPython3.sh --addressLine1 "Melissa Data GmbH" --addressLine2 "Cäcilienstr. 42-44" --addressLine3 "50667 Köln" --country "Germany" --license "<your_license_string>" --quiet
+  ```
 This is the expected output of a successful setup for interactive mode:
 
 ![alt text](/screenshots/output.PNG)
@@ -232,8 +232,6 @@ Troubleshooting for errors found while running your program.
 | Error      | Description |
 | ----------- | ----------- |
 | ErrorRequiredFileNotFound      | Program is missing a required file. Please check your Data folder and refer to the list of required files above. If you are unable to obtain all required files through the Melissa Updater, please contact technical support below. |
-| ErrorDatabaseExpired   | .db file(s) are expired. Please make sure you are downloading and using the latest release version. (If using the Melissa Updater, check bash script for 'RELEASE_VERSION = {version}'  and change the release version if you are using an out of date release).     |
-| ErrorFoundOldFile   | File(s) are out of date. Please make sure you are downloading and using the latest release version. (If using the Melissa Updater, check bash script for 'RELEASE_VERSION = {version}'  and change the release version if you are using an out of date release).    |
 | ErrorLicenseExpired   | Expired license string. Please contact technical support below. |
 
 

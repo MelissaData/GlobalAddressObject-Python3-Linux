@@ -106,12 +106,6 @@ while [ $# -gt 0 ] ; do
         ;;
     --quiet) 
         quiet="true" 
-        
-        if [ "$quiet" == "--addressLine1" ] || [ "$quiet" == "--addressLine2" ] || [ "$quiet" == "--addressLine3" ] || [ "$quiet" == "--locality" ] || [ "$quiet" == "--administrativeArea" ] || [ "$quiet" == "--postalCode" ] || [ "$quiet" == "--country" ] || [ "$quiet" == "--dataPath" ] || [ "$quiet" == "--quiet" ] || [ -z "$quiet" ];
-        then
-            printf "${RED}Error: problem setting \'quiet\'.${NC}\n"  
-            exit 1
-        fi    
         ;;
   esac
   shift
@@ -119,7 +113,7 @@ done
 
 ######################### Config ###########################
 
-RELEASE_VERSION='2024.Q3'
+RELEASE_VERSION='2024.Q4'
 ProductName="GLOBAL_DQ_DATA"
 
 # Uses the location of the .sh file 
