@@ -103,10 +103,10 @@ class mdGlobalAddr(object):
 		lib.mdGlobalAddrDestroy(self.I)
 
 	def SetLicenseString(self, p1):
-		return lib.mdGlobalAddrSetLicenseString(self.I, p1.encode('utf-8'))
+		return lib.mdGlobalAddrSetLicenseString(self.I, (p1 or '').encode('utf-8'))
 
 	def SetPathToGlobalAddrFiles(self, p1):
-		lib.mdGlobalAddrSetPathToGlobalAddrFiles(self.I, p1.encode('utf-8'))
+		lib.mdGlobalAddrSetPathToGlobalAddrFiles(self.I, (p1 or '').encode('utf-8'))
 
 	def InitializeDataFiles(self):
 		return ProgramStatus(lib.mdGlobalAddrInitializeDataFiles(self.I))
@@ -115,16 +115,16 @@ class mdGlobalAddr(object):
 		lib.mdGlobalAddrClearProperties(self.I)
 
 	def SetInputParameter(self, pszParamName, pszParamValue):
-		return lib.mdGlobalAddrSetInputParameter(self.I, pszParamName.encode('utf-8'), pszParamValue.encode('utf-8'))
+		return lib.mdGlobalAddrSetInputParameter(self.I, (pszParamName or '').encode('utf-8'), (pszParamValue or '').encode('utf-8'))
 
 	def VerifyAddress(self):
 		return lib.mdGlobalAddrVerifyAddress(self.I)
 
 	def GetOutputParameter(self, pszParamName):
-		return lib.mdGlobalAddrGetOutputParameter(self.I, pszParamName.encode('utf-8')).decode('utf-8')
+		return lib.mdGlobalAddrGetOutputParameter(self.I, (pszParamName or '').encode('utf-8')).decode('utf-8')
 
 	def TransliterateText(self, pszInput, pszInputScript, pszOutputScript):
-		return lib.mdGlobalAddrTransliterateText(self.I, pszInput.encode('utf-8'), pszInputScript.encode('utf-8'), pszOutputScript.encode('utf-8')).decode('utf-8')
+		return lib.mdGlobalAddrTransliterateText(self.I, (pszInput or '').encode('utf-8'), (pszInputScript or '').encode('utf-8'), (pszOutputScript or '').encode('utf-8')).decode('utf-8')
 
 	def GetCurrentAtomSet(self):
 		return lib.mdGlobalAddrGetCurrentAtomSet(self.I).decode('utf-8')
@@ -133,19 +133,19 @@ class mdGlobalAddr(object):
 		return lib.mdGlobalAddrInputsAsAtomSet(self.I).decode('utf-8')
 
 	def RightFieldResultsAsAtomSet(self, pszAtomSet):
-		return lib.mdGlobalAddrRightFieldResultsAsAtomSet(self.I, pszAtomSet.encode('utf-8')).decode('utf-8')
+		return lib.mdGlobalAddrRightFieldResultsAsAtomSet(self.I, (pszAtomSet or '').encode('utf-8')).decode('utf-8')
 
 	def TokenizerResultsAsAtomSet(self, pszAtomSet):
-		return lib.mdGlobalAddrTokenizerResultsAsAtomSet(self.I, pszAtomSet.encode('utf-8')).decode('utf-8')
+		return lib.mdGlobalAddrTokenizerResultsAsAtomSet(self.I, (pszAtomSet or '').encode('utf-8')).decode('utf-8')
 
 	def InputMapperResultsAsAtomSet(self, pszAtomSetArray):
-		return lib.mdGlobalAddrInputMapperResultsAsAtomSet(self.I, pszAtomSetArray.encode('utf-8')).decode('utf-8')
+		return lib.mdGlobalAddrInputMapperResultsAsAtomSet(self.I, (pszAtomSetArray or '').encode('utf-8')).decode('utf-8')
 
 	def MatchEngineResultsAsAtomSet(self, pszAtomSetArray):
-		return lib.mdGlobalAddrMatchEngineResultsAsAtomSet(self.I, pszAtomSetArray.encode('utf-8')).decode('utf-8')
+		return lib.mdGlobalAddrMatchEngineResultsAsAtomSet(self.I, (pszAtomSetArray or '').encode('utf-8')).decode('utf-8')
 
 	def OutputMappingResultsAsAtomSet(self, pszAtomSet):
-		return lib.mdGlobalAddrOutputMappingResultsAsAtomSet(self.I, pszAtomSet.encode('utf-8')).decode('utf-8')
+		return lib.mdGlobalAddrOutputMappingResultsAsAtomSet(self.I, (pszAtomSet or '').encode('utf-8')).decode('utf-8')
 
 	def SetOutputsFromAtomSet(self, pszAtomSet):
-		lib.mdGlobalAddrSetOutputsFromAtomSet(self.I, pszAtomSet.encode('utf-8'))
+		lib.mdGlobalAddrSetOutputsFromAtomSet(self.I, (pszAtomSet or '').encode('utf-8'))
