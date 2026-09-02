@@ -48,7 +48,6 @@ lib.mdGlobalAddrOutputMappingResultsAsAtomSet.restype = c_char_p
 lib.mdGlobalAddrSetOutputsFromAtomSet.argtypes = [c_void_p, c_char_p]
 lib.mdGlobalAddrSetOutputsFromAtomSet.restype = None
 
-# mdGlobalAddr Enumerations
 class ProgramStatus(Enum):
 	ErrorNone = 0
 	ErrorOther = 1
@@ -57,43 +56,6 @@ class ProgramStatus(Enum):
 	ErrorFoundOldFile = 4
 	ErrorDatabaseExpired = 5
 	ErrorLicenseExpired = 6
-
-class AccessType(Enum):
-	Local = 0
-	Remote = 1
-
-class DiacriticsMode(Enum):
-	Auto = 0
-	On = 1
-	Off = 2
-
-class StandardizeMode(Enum):
-	ShortFormat = 0
-	LongFormat = 1
-	AutoFormat = 2
-
-class SuiteParseMode(Enum):
-	ParseSuite = 0
-	CombineSuite = 1
-
-class AliasPreserveMode(Enum):
-	ConvertAlias = 0
-	PreserveAlias = 1
-
-class AutoCompletionMode(Enum):
-	AutoCompleteSingleSuite = 0
-	AutoCompleteRangedSuite = 1
-	AutoCompletePlaceHolderSuite = 2
-	AutoCompleteNoSuite = 3
-
-class ResultCdDescOpt(Enum):
-	ResultCodeDescriptionLong = 0
-	ResultCodeDescriptionShort = 1
-
-class MailboxLookupMode(Enum):
-	MailboxNone = 0
-	MailboxExpress = 1
-	MailboxPremium = 2
 
 class mdGlobalAddr(object):
 	def __init__(self):
